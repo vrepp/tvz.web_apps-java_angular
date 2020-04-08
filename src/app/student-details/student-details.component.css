@@ -3,3 +3,16 @@
     font-weight: 400;
     color: #212529;
 }
+
+div {
+    line-height: 1.5;
+    text-align: left;
+}
+
+span {
+    font-weight: 500;
+}
+
+.isPayingTuition {
+    color: #cc0000;
+}
