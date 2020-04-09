@@ -1,0 +1,15 @@
+* {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 400;
+    color: #212529;
+}
+
+div {
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+span {
+    font-weight: 500;
+}

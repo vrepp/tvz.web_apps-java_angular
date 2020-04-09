@@ -1,0 +1,5 @@
+<div *ngIf="jmbag">
+    <div *ngIf="isStartedOnTVZ(); then content_tvz else content_other"></div>
+    <ng-template #content_tvz>TVZ student od početka studija</ng-template>
+    <ng-template #content_other>Započeo studij na drugom visokom učilištu</ng-template>
+</div>
