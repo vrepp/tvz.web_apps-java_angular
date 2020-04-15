@@ -22,7 +22,8 @@ export class StudentDetailsComponent implements OnInit, OnDestroy {
     this.sub = this.route.params.subscribe( params => {
       const jmbag = params['jmbag'];
 
-      this.studentService.getStudent(jmbag).subscribe(student => this.student = student);
+      this.studentService.getStudent(jmbag)
+        .subscribe(student => this.student = student);
     });
   }
 
