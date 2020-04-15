@@ -2,5 +2,5 @@
     <h2>Detalji studenta - {{student.jmbag}}</h2>
     <div><span>JMBAG: </span>{{student.jmbag}}</div>
     <div><span>Broj ECTS: </span>{{student.numECTS}}</div>
-    <div *ngIf="student.isPayingTuition" class="isPayingTuition">Student treba platiti školarinu</div>
+    <div *ngIf="student.payingTuition" class="isPayingTuition">Student treba platiti školarinu</div>
 </div>

@@ -2,8 +2,30 @@
 <ul>
     <li *ngFor="let student of students"
         (click)="onSelect(student)"
-        [class.selected]="student === selectedStudent"><span class="badge">{{student.jmbag}}</span> {{student.numECTS}} ECTS
+        [class.selected]="student === selectedStudent">
+            <span class="badge">{{student.jmbag}}</span> {{student.numECTS}} ECTS
+            <button class="btn_delete" type="button" (click)="onDelete(student); $event.stopPropagation();">X</button>
     </li>
 </ul>
 
-<app-student-details [student]="selectedStudent" ></app-student-details>
+<div>
+    <h2>Unesi novog studenta</h2>
+    <div>
+        <label>Ime:</label>
+        <div><input type="text" #firstName /></div>
+    </div>
+    <div>
+        <label>Prezime:</label>
+        <div><input type="text" #lastName /></div>
+    </div>
+    <div>
+        <label>JMBAG:</label>
+        <div><input type="text" #jmbag /></div>
+    </div>
+    <div>
+        <label>Broj ECTS:</label>
+        <div><input type="text" #numECTS /></div>
+    </div>
+
+    <button (click)="add(firstName.value, lastName.value, jmbag.value, +numECTS.value); firstName.value = ''; lastName.value = ''; jmbag.value = ''; numECTS.value = ''">Unesi studenta</button>
+</div>

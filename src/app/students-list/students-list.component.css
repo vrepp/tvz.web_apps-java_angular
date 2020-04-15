@@ -38,3 +38,16 @@ li {
     border-radius: .25rem;
     margin-right: 1rem;
 }
+
+.btn_delete {
+    background-color: #cc0000;
+    border: none;
+    color: white;
+    padding: .375rem .75rem;
+    cursor: pointer;
+    border-radius: .25rem;
+  }
+  
+  .btn_delete:hover {
+    background-color: #aa0000;
+  }

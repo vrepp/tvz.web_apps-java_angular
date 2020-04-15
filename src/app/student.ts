@@ -1,5 +1,8 @@
 export interface Student {
+    firstName: string;
+    lastName: string;
     jmbag: string;
     numECTS: number;
-    isPayingTuition: boolean;
+    dateOfBirth: string;
+    payingTuition: boolean;
 }
