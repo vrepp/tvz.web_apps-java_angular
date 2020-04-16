@@ -1,0 +1,6 @@
+<h2>Popis predavača</h2>
+<ul>
+    <li *ngFor="let lecturer of lecturers" (click)="onSelect(lecturer)">
+        {{lecturer.firstName}} {{lecturer.lastName}}
+    </li>
+</ul>

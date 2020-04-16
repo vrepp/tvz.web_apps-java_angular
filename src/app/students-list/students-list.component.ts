@@ -53,7 +53,7 @@ export class StudentsListComponent implements OnInit {
 
   onSelect(student: Student): void {
     this.selectedStudent = student;
-    this.router.navigate(['/detail', student.jmbag]);
+    this.router.navigate(['/student', student.jmbag]);
   }
 
   onDelete(student: Student): void {
