@@ -16,3 +16,17 @@ span {
 .isPayingTuition {
     color: #cc0000;
 }
+
+.btn_back {
+    background-color: #64a19d;
+    border: none;
+    color: white;
+    padding: .375rem .75rem;
+    cursor: pointer;
+    border-radius: .25rem;
+    margin-top: .75rem;
+  }
+  
+.btn_back:hover {
+    background-color: #64a5ad;
+}

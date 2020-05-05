@@ -1,7 +1,10 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Location } from '@angular/common';
 import { Student } from '../student';
 import { ActivatedRoute } from '@angular/router';
 import { StudentService } from '../student.service';
+import { CourseService } from '../course.service';
+import { Course } from '../course';
 
 @Component({
   selector: 'app-student-details',
@@ -11,11 +14,14 @@ import { StudentService } from '../student.service';
 export class StudentDetailsComponent implements OnInit, OnDestroy {
 
   student: Student;
+  courses: Course[];
   private sub: any;
 
   constructor(
+    private route: ActivatedRoute,
     private studentService: StudentService,
-    private route: ActivatedRoute
+    private courseService: CourseService,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -24,10 +30,17 @@ export class StudentDetailsComponent implements OnInit, OnDestroy {
 
       this.studentService.getStudent(jmbag)
         .subscribe(student => this.student = student);
+
+      this.courseService.getCoursesByStudentJmbag(jmbag)
+        .subscribe(courses => this.courses = courses);
     });
   }
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

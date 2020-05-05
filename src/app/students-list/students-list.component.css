@@ -48,6 +48,6 @@ li {
     border-radius: .25rem;
   }
   
-  .btn_delete:hover {
+.btn_delete:hover {
     background-color: #aa0000;
-  }
+}
